@@ -15,6 +15,7 @@ function App() {
   }
   return (
     <React.Fragment>
+    <button onClick={e=>{console.log(e)}} ></button>
    <button onClick={handleClick('+')} >Increase</button>
    <p>{count}</p>
    <button onClick={handleClick('+')} >decrease</button>  
