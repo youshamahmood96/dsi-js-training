@@ -1,44 +1,23 @@
 import React from "react";
-import ShowUser from "./ShowUser";
+// import ApiCall from "./ApiCall";
+// import ShowUser from "./ShowUser";
+// import { users } from "./users";
 
 function App() {
-  const users = [
-    {
-        name:"John",
-        age:23,
-        description:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
-        avatar:"https://www.w3schools.com/howto/img_avatar.png"
-    },
-    {
-        name:"Kira",
-        age:25,
-        description:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
-        avatar:"https://www.w3schools.com/howto/img_avatar.png"
-    },
-    {
-        name:"Kim",
-        age:28,
-        description:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
-        avatar:"https://www.w3schools.com/howto/img_avatar.png"
-    },
-    {
-        name:"Ryan",
-        age:50,
-        description:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
-        avatar:"https://www.w3schools.com/howto/img_avatar.png"
-    },
-    {
-        name:"Rolf",
-        age:60,
-        description:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
-        avatar:"https://www.w3schools.com/howto/img_avatar.png"
+  let count = 0
+  const handleClick = (arg) =>{
+    if(arg === '+'){
+      count++
     }
-]
+    else{
+      count--
+    }
+  }
   return (
     <React.Fragment>
-      {
-        users.map((user,index)=>(<ShowUser key={index} user={user} />))
-      }
+   <button onClick={handleClick('+')} >Increase</button>
+   <p>{count}</p>
+   <button onClick={handleClick('+')} >decrease</button>  
     </React.Fragment>
   );
 }
