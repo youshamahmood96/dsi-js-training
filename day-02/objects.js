@@ -3,8 +3,9 @@
 //     b:3
 // }
 // let z = y
-// z.c = 7
-// console.log(y); 
+// z.b = 7
+// console.log(y.b); 
+
 // object deep copy vs shallow copy
 
 // // Example 1
@@ -28,6 +29,7 @@
 // let personCopy = {...person}
 // personCopy.place.city = 'Narayanganj'
 // console.log(person);
+
 // what to do? we will use deep copy here to avoid the problem
 
 // follow these steps : 1. Stringify the object, 2. Store this in a new variable, 3. Parse the stringified object
@@ -43,10 +45,9 @@
 // let stringified = JSON.stringify(person1)
 // let personCopy1 = JSON.parse(stringified)
 // personCopy1.place.city = 'Narayanganj'
+// console.log(person1);
 
 // // destructure with aliases
-// const { name:userName } = person1
-
 // const {name:userName} = {name:'John'}
-// console.log(userName);
+// console.log(name);
 

@@ -20,3 +20,17 @@
 // When using React, you generally don’t need to call addEventListener to add listeners to a DOM element after it is created. 
 // Instead, just provide a listener when the element is initially rendered.
 
+// hooks?
+
+// special functions whcih lets use to hook into react features. usually functions are stateless, but we can introduce state
+// using the useState hook.
+
+// useState
+
+// single state (array,object)
+// multiple state
+
+// useEffect
+// simple api
+// cleanup, why needed
+

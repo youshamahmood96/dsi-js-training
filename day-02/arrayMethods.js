@@ -51,7 +51,7 @@ clubs.forEach(club=>goals.push(club.goals))
 
 // filter (immuting operation)
 
-// let x = clubs.filter(club=>club.goals >100)
+// let x = clubs.filter(club=>club.goals>50) 
 // console.log(x);
 
 // map
@@ -62,6 +62,28 @@ clubs.forEach(club=>goals.push(club.goals))
 // }
 // clubs.map(club=>uiLoader(club))
 // console.log(ui);
+
+// const teams = document.getElementById('teams')
+// const uiLoader = (club)=>{
+//    const{name} = club
+//    teams.innerHTML += `<h3>${name}</h3>`
+//    return club
+// }
+
+// clubs.forEach(club=>uiLoader(club))
+
+
+// map vs forEach
+// 1. returning value
+// console.log(clubs.forEach(club=>club.name='hello'));
+// console.log(clubs.map(club=>uiLoader(club)));
+
+// 2.Ability to chain
+// console.log(clubs.forEach(club=>club.name='hello').filter(club=>club.goals>100));
+// console.log(clubs.map(club=>uiLoader(club)).filter(club=>club.goals<100));
+
+// 3.Mutation
+// forEach doesnt mutate,but map does
 
 
 // sort (mutating operation)
@@ -81,7 +103,7 @@ clubs.forEach(club=>goals.push(club.goals))
 // If compareFunction(a, b) returns a value > than 0, sort b before a.
 // If compareFunction(a, b) returns a value < than 0, sort a before b.
 // If compareFunction(a, b) returns 0, a and b are considered equal.
-
+// console.log(goals);
 // goals.sort((a,b)=>{
 //     return a-b
 // })
@@ -103,7 +125,7 @@ clubs.forEach(club=>goals.push(club.goals))
 // some
 
 // console.log(goals.some((element,index,array)=>{
-//     return element > 0
+//     return element < 0
 // }));
 
 // function callbackfn(element,index,array){}

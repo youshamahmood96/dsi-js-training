@@ -1,11 +1,3 @@
-// setTimeout concept:
-// console.log('1');
-// setTimeout(function(){
-//     console.log('2');
-// },0)
-// console.log('3');
-
-
 // Generators are functions that can be exited and later re-entered.Their context (variable bindings) will be saved across re-entrances.
 // Calling a generator function does not execute its body immediately; an iterator object for the function is returned instead
 //  When the iterator's next() method is called, the generator function's body is executed until the first yield expression, which specifies the value to be returned from the iterator or, 
@@ -35,7 +27,7 @@ function* generator() {
 
 var gen = generator();
 console.log(gen.next());
-console.log(personArray[1]);
-console.log(personArray[2]);
+console.log(personArray);
+console.log(personArray);
 console.log(gen.next());
 console.log(personArray);

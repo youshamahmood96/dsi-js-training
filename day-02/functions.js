@@ -1,7 +1,5 @@
-// // arrow functions are not hoisted,normal functions are hoisted
-
 // console.log(myFunc(5));
-// function myFunc (num){
+// const myFunc= (num)=>{
 //     return num
 // }
 
@@ -32,7 +30,7 @@
 
 // from masum bhai's lecture
 
-// function printName(){ 
+// const printName=()=>{ 
 //     console.log(`${this.brand} : ${this.model}`);
 // }
 // const car = {
@@ -44,7 +42,7 @@
 
 
 // // you cannot use new keyword with arrow function, because arrow functions cannot be used as constructors
-// const myFun = () =>{
+// function myFun () {
 //     return () =>{
 //         return this
 //     }
