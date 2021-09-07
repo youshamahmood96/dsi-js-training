@@ -1,0 +1,14 @@
+import React, { createContext, useState } from 'react'
+import {users} from '../../Assets/users'
+export const UserContext = createContext()
+
+function UserProvider(props) {
+    const [user,setUser] = useState(users)
+    return (
+        <UserContext.Provider value={[user,setUser]} >
+            {props.children}
+        </UserContext.Provider>
+    )
+}
+
+export default UserProvider
