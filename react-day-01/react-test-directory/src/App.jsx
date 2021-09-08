@@ -1,9 +1,10 @@
 import React from "react";
-import DayFour from "./Day04/DayFour/DayFour";
+import ContextSimple from "./ContextApiFolders/ContextSimple/ContextSimple";
+// import RouterHandler from "./RouterBasics/Routing/RouterHandler";
 function App() {
   return (
     <React.Fragment>
-     <DayFour/>
+     <ContextSimple />
     </React.Fragment>
   );
 }

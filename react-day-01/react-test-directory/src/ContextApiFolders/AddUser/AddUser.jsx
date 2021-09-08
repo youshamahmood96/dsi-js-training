@@ -2,10 +2,9 @@ import React, { useContext, useState } from 'react'
 import { UserContext } from '../Context/UserContext'
 
 function AddUser() {
-    const [user,setUser] = useContext(UserContext)
-    console.log(user.length);
+    const {users,addUser} = useContext(UserContext)
     const [state,setState] = useState({
-        id:user.length+1,
+        id:users.length+1,
         name:"",
         age:"",
         description:"",
@@ -16,14 +15,14 @@ function AddUser() {
     }
     const handleSubmit = e => {
         e.preventDefault()
-        setUser(prevUser=>[...user,state])
+        addUser(state)
     }
     return (
         <div>
             <form>
                 <label htmlFor="">Id : </label>
                 <br />
-                <input readOnly value={user.length+1} type="text" name="name" />
+                <input readOnly value={users.length+1} type="text" name="name" />
                 <br />
                 <label htmlFor="">Name : </label>
                 <br />
