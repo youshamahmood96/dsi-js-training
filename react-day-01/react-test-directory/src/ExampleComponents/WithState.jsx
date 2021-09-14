@@ -2,21 +2,17 @@ import React, { useState } from "react";
 
 function WithoutState() {
   const [state,setState] = useState({name:'',password:''})
-  const handleChange = (e,arg) => {
-    if(arg === 'name'){
-      setState({...state,name:e.target.value})
-    }
-    else{
-      setState({...state,password:e.target.value})
-    }
+  const handleChange = (e) => {
+    setState({...state,[e.target.name]:e.target.value})
   }
+  console.log(state);
   return (
     <div>
-      <label htmlFor="">Name</label>
-     <input onChange={e=>handleChange(e,'name')} type="text" />
+      <label htmlFor="name">Name</label>
+     <input value={state.name} onChange={handleChange} name="name" type="text" />
      <br />
-     <label htmlFor="">password</label>
-     <input onChange={e=>handleChange(e,'pass')} type="text" />
+     <label htmlFor="password">password</label>
+     <input value={state.password} onChange={handleChange} name="password" type="text" />
     </div>
   );
 }

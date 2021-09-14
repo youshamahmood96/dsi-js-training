@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { UserContext } from '../Context/UserContext'
 
-function AddUser() {
-    // console.log(users);
+function AddUSer() {
     const defaultState = {
         id:`${Date.now() + Math.random()}`,
         name:"",
@@ -18,7 +17,6 @@ function AddUser() {
     }
     const handleSubmit = e => {
         e.preventDefault()
-        // addUser(state)
         setUser([...user,state])
         setState(defaultState)
     }
@@ -36,34 +34,13 @@ function AddUser() {
                 <br />
                 <label htmlFor="">Description : </label>
                 <br />
-                <input value={description} onChange={handleChange} type="text" name="description" id="" />
+                <input  value={description} onChange={handleChange} type="text" name="description" id="" />
                 <br />
                 <input type="submit" value="Add User" />
                 <br />
             </form>
         </div>
     )
-    // return (
-    //     <div>
-    //         <form onSubmit={handleSubmit} >
-    //             <br />
-    //             <label htmlFor="">Name : </label>
-    //             <br />
-    //             <input type="text" name="name" />
-    //             <br />
-    //             <label htmlFor="">Age : </label>
-    //             <br />
-    //             <input type="number" name="age" id="" />
-    //             <br />
-    //             <label htmlFor="">Description : </label>
-    //             <br />
-    //             <input type="text" name="description" id="" />
-    //             <br />
-    //             <input type="submit" value="Add User" />
-    //             <br />
-    //         </form>
-    //     </div>
-    // )
 }
 
-export default AddUser
+export default AddUSer
