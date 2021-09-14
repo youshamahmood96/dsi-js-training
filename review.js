@@ -117,27 +117,23 @@
 
 // Emon
 
-// Folder Structure needs to be fixed
-// after clicking edit, previous values are not persisted, we can put any value we want in email
-// fileds are not cleared after operation is completed
-// delete the trashes
-// remove console logs
-// @Home.jsx
-// // @5 confusing naming
-// // @9 unnecessary useEffect hook
-// // @134 proper destructuring needed
-// @Cards.jsx
-// // @5 , unnecessary syntax
+// upgrade npm version
+// trashes still here
+// app.js still not clean
+// write the reducer function separately
+// @components>Home.js
+// // use reducer functions for these tasks
+// // do not use splice
+// // @12 why change,setChange?
+// // everything in one single file
+
+// @components>Cards.jsx
+// // why update,setupdate
 
 // Shadman
 
-// clean up app.js
-// remove trashes
-// class based components?
-// a single useState nstead of commonState
-// remove console logs
-// proper destructuring (e.g @ showtodo.js>10 no line)
-// what does isCancelPresent do? @createTodo>21
+// @todoReducer.js
+// //
 
 // Rashidul
 
@@ -212,32 +208,18 @@
 // shifat
 
 // code review (overall)
-
-// a bit cleaner, structure and app.jsx
-// clean up app.css
-// use "className" instead of "class"
-// what does store.js do?
+// dont push .idea
 
 // code review (file based)
 
-// @TodoForm.jsx
-// //destructure the props and other things, destructure everything
-// //can we clean up the handleFormSubmit?
-// //@56 can we use react synthetic event instead of adding an event listener?
-// //@59 we are using a function inside useEffect but we are not referencing it in our dependency list
+// @context/todoReducer.js
+// //@9 no need to copy the array
 
-// @NavBar.jsx
-// // @5 use '/' instead of '#'
+// @TodoList.jsx
+// //@8 do we really need this?
+// //@27 destructure here
 
-// @Home.jsx
-// //@12 we can cut off x and directly use the method
-// //@29 use immuting methods like filter instead of using splice
 
-// @Todo.jsx
-// //@14 what does handleClick do?
-
-// @localstorage.js
-// //we are using function based components here, we will use function methods all throughout the application
 
 
 // uchaiye
