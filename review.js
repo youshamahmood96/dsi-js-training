@@ -79,16 +79,25 @@
 // }
 
 // Mahbub Alam Navid
-// remove trashes from folder structure
-// keep the app.js clean (multiple things need to be fixed)
-// proper destructuring needed
-// use the createContext line to update the initial state.
-// folder structure can be better
-// @AddUser.js
+
+// first review
+// remove trashes from folder structure (not done)
+// keep the app.js clean (multiple things need to be fixed) (partially done)
+// proper destructuring needed (not done)
+// use the createContext line to update the initial state. (not done)
+// folder structure can be better (done)
+// @AddUser.js (done)
 // // @6, confusing
 // // use single state throughout the whole component
 // // @30 you can use callback instead of this
 // // @33 type={"email"} not needed, just type="email"
+
+// second review
+// confusing naming (@AddUser:16)
+// use separate handleChange function
+// no validation on fields
+// @globalContext
+// // why two useReducer hook
 
 // Md. Basim Uddin Ahmed
 // Do not push .idea 
@@ -105,3 +114,152 @@
 // @TodoCreate
 // // @19 why didnt we do this in state? also, use destructuring
 // // @88 explain
+
+// Emon
+
+// Folder Structure needs to be fixed
+// after clicking edit, previous values are not persisted, we can put any value we want in email
+// fileds are not cleared after operation is completed
+// delete the trashes
+// remove console logs
+// @Home.jsx
+// // @5 confusing naming
+// // @9 unnecessary useEffect hook
+// // @134 proper destructuring needed
+// @Cards.jsx
+// // @5 , unnecessary syntax
+
+// Shadman
+
+// clean up app.js
+// remove trashes
+// class based components?
+// a single useState nstead of commonState
+// remove console logs
+// proper destructuring (e.g @ showtodo.js>10 no line)
+// what does isCancelPresent do? @createTodo>21
+
+// Rashidul
+
+// delete trashes
+// keep the app.js clean
+// proper destructuring needed(e.g @TodoForm.jsx>32)
+// .js or .jsx?
+// remove console logs
+// why the saved flag?
+// @ app.js
+// // @23, [todolist,setTodolist], also, do not use "list" because list means something different in swe
+
+// Sneha
+
+// requirement check
+
+// should show any sort of effect on hover over a button
+// use case: after I delete all todos, and then add one, all of them are restored again
+// no update button, at first I thought that the update functionality was not done
+// after I click on a name, then update, and then come back to the home page, the color changes
+// I can put anything inside email, no validation
+// I can literally put an empty object, required not included
+
+// code review (overall)
+
+// clean up the folder structure
+// no need to use getters and setters, as we do not use oop structure in react functional programming
+// use proper destructuring e.g : @dashboa=rd.jsx>33
+// clean up console logs
+// keep your app.js clean
+// filenames not in sync with function names
+// js or jsx?
+
+// code review (file based)
+
+// @app.js
+// // @13 instead of <Route path="/not_found" component={NotFound} />
+        //   <Redirect from="/" exact to="/dashboard" />
+        //   <Redirect to="/not_found" />
+// we can use <Route path="*" component={NotFound} />
+// @dashboard.jsx
+// // @12 no need to use a new variable
+// @form.jsx
+// // @38, we need to guide the user to the home page
+
+// Jahid Hasan
+
+// Requirement check
+
+// No validation on fields, I can put anything anywhere
+// When I click on edit, nothing in the ux indicates that I am actually editing stuff
+// After I edit, the fields are still filled with the previous values
+
+// code review (overall)
+
+// clean up the folder structure
+// Class based component used, try to rewrite it using functional components and hooks.
+// everything in app.js, full modularization of the project needed
+// get rid of the console logs
+
+// code review (file based)
+
+// @App.js
+// // @8 what does this title do?
+// // @9 what does act do?
+// // how does addTodo work?
+// // what is i in deleteTodo? confusing naming
+// // do not delete todos using array index, use a unique id, also filter>splice as splice changes the original array and filter creates a new array
+// // @42,43 why is this.setState called twice?
+// // infuse the nameChangeHandler,emailChangeHandler,todoChangeHandler into one single method
+
+// shifat
+
+// code review (overall)
+
+// a bit cleaner, structure and app.jsx
+// clean up app.css
+// use "className" instead of "class"
+// what does store.js do?
+
+// code review (file based)
+
+// @TodoForm.jsx
+// //destructure the props and other things, destructure everything
+// //can we clean up the handleFormSubmit?
+// //@56 can we use react synthetic event instead of adding an event listener?
+// //@59 we are using a function inside useEffect but we are not referencing it in our dependency list
+
+// @NavBar.jsx
+// // @5 use '/' instead of '#'
+
+// @Home.jsx
+// //@12 we can cut off x and directly use the method
+// //@29 use immuting methods like filter instead of using splice
+
+// @Todo.jsx
+// //@14 what does handleClick do?
+
+// @localstorage.js
+// //we are using function based components here, we will use function methods all throughout the application
+
+
+// uchaiye
+
+// code review(overall)
+
+// bad ux, use margin and padding properly
+// use className,htmlFor instead of using class,for
+// cleaner folder structure necessary
+// clean up app.js
+// js or jsx?
+// proper destructuring needed (e.g @app.js>30,34,38)
+
+// code review(file based)
+
+// @App.js
+// //@6,8 confusing namings
+// //@8 no need to use an array over this object
+// //@12 use "description" instead of using "des"
+// //@27 extract this onsubmit event into a function
+// //@42 *create
+// @TodoBoard.jsx
+// //extract all inline methods to functions
+// //do not use splice, it mutates the original array, instead use filter
+

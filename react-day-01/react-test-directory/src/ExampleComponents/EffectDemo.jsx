@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function EffectDemo(props) {
-  const {name} = props.data
+function EffectDemo() {
   const [state, setState] = useState(null);
   useEffect(() => {
     console.log("I am the effect");
@@ -19,8 +18,6 @@ function EffectDemo(props) {
       >
         Click me
       </button>
-      <p>state: {state}</p>
-      <h1>{name}</h1>
     </>
   );
 }

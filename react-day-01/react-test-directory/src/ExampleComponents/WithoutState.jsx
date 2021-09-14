@@ -1,19 +1,20 @@
+import React, { useState } from "react";
+
 function WithoutState() {
-  let count = 0
-  const handleClick = (arg) =>{
+  const [count,setCount] = useState(0)
+  const handleClick = (arg) => {
     if(arg === '+'){
-      count++
+      setCount(count+1)
     }
     else{
-      count--
+      setCount(count-1)
     }
   }
   return (
     <React.Fragment>
-    <button onClick={e=>{console.log(e)}} ></button>
-   <button onClick={handleClick('+')} >Increase</button>
+   <button onClick={()=>handleClick('+')} >Increase</button>
    <p>{count}</p>
-   <button onClick={handleClick('+')} >decrease</button>  
+   <button onClick={()=>handleClick('-')} >decrease</button> 
     </React.Fragment>
   );
 }
