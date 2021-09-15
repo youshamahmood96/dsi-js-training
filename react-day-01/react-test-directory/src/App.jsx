@@ -1,5 +1,7 @@
 import React from "react";
-import ReduxExample from "./ReduxFolders/ReduxExample/ReduxExample";
+import ReduxSession1 from "./ReduxSession1/ReduxSession1";
+// import ReduxPractise from "./ReduxPractise/ReduxPractise";
+// import ReduxExample from "./ReduxFolders/ReduxExample/ReduxExample";
 // import ContextSimple from "./ContextApiFolders/ContextSimple/ContextSimple";
 // import RouterHandler from "./RouterBasics/Routing/RouterHandler";
 // import ContextSession from "./ContextSession/ContextSession/ContextSession";
@@ -14,7 +16,7 @@ import ReduxExample from "./ReduxFolders/ReduxExample/ReduxExample";
 function App() {
   return (
     <React.Fragment>
-      <ReduxExample />
+      <ReduxSession1/>
     </React.Fragment>
   );
 }
