@@ -245,3 +245,19 @@
 // //extract all inline methods to functions
 // //do not use splice, it mutates the original array, instead use filter
 
+// opu
+
+// code review (requirements)
+// zero responsiveness
+// no indication of adding a todo
+
+// code review (overall)
+// clean up folder structure
+// clean up app.js
+
+// code review (file based)
+// @Todo.jsx
+// //  @34,36 confusing naming and camelcase needed
+// // @41-43 proper destructuring needed
+// you should make one component, which can both be used to edit and update todo
+// why database.js?
