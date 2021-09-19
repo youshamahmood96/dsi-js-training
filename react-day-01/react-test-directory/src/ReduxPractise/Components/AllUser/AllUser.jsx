@@ -17,6 +17,7 @@ function AllUser() {
     const fetchedUsers = useSelector(state=>{
         return state.fetchApi.users
     })
+    console.log(fetchedUsers);
     return (
         <div>
             {fetchedUsers && fetchedUsers[0] && fetchedUsers[0].name}

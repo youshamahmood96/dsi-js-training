@@ -138,72 +138,47 @@
 // Rashidul
 
 // delete trashes
-// keep the app.js clean
-// proper destructuring needed(e.g @TodoForm.jsx>32)
-// .js or .jsx?
-// remove console logs
-// why the saved flag?
-// @ app.js
-// // @23, [todolist,setTodolist], also, do not use "list" because list means something different in swe
+// @Home.js
+// // @22, what is a?
+// @TodosReducer.jsx
+// // use a switch-case instead of if-else
 
 // Sneha
 
 // requirement check
 
-// should show any sort of effect on hover over a button
-// use case: after I delete all todos, and then add one, all of them are restored again
-// no update button, at first I thought that the update functionality was not done
-// after I click on a name, then update, and then come back to the home page, the color changes
-// I can put anything inside email, no validation
-// I can literally put an empty object, required not included
+
 
 // code review (overall)
 
 // clean up the folder structure
-// no need to use getters and setters, as we do not use oop structure in react functional programming
-// use proper destructuring e.g : @dashboa=rd.jsx>33
-// clean up console logs
-// keep your app.js clean
-// filenames not in sync with function names
-// js or jsx?
-
+// why is FakeUsersDatabase a jsx file?
+// clean up console logs, warning showing due to unnecessary imports in app.jsx 
+// initial state of the users not set while creating context, rather it was set while routing, which doesnt make sense
+// remove unnecessary comments
 // code review (file based)
 
-// @app.js
-// // @13 instead of <Route path="/not_found" component={NotFound} />
-        //   <Redirect from="/" exact to="/dashboard" />
-        //   <Redirect to="/not_found" />
-// we can use <Route path="*" component={NotFound} />
-// @dashboard.jsx
-// // @12 no need to use a new variable
-// @form.jsx
-// // @38, we need to guide the user to the home page
+// @DashBoard.jsx
+// //@13 you can omit new_users
+// //@33 destructure here
+// @TodoForm.jsx
+// //@22 destructure here
+// //@54 unnecessary useEffect
 
 // Jahid Hasan
 
 // Requirement check
 
-// No validation on fields, I can put anything anywhere
-// When I click on edit, nothing in the ux indicates that I am actually editing stuff
-// After I edit, the fields are still filled with the previous values
+// show indication of editing
 
 // code review (overall)
 
-// clean up the folder structure
-// Class based component used, try to rewrite it using functional components and hooks.
-// everything in app.js, full modularization of the project needed
-// get rid of the console logs
+// clear up console
 
 // code review (file based)
 
-// @App.js
-// // @8 what does this title do?
-// // @9 what does act do?
-// // how does addTodo work?
-// // what is i in deleteTodo? confusing naming
-// // do not delete todos using array index, use a unique id, also filter>splice as splice changes the original array and filter creates a new array
-// // @42,43 why is this.setState called twice?
-// // infuse the nameChangeHandler,emailChangeHandler,todoChangeHandler into one single method
+// @Show.js
+// // use html tags instead of strings
 
 // shifat
 
@@ -261,3 +236,58 @@
 // // @41-43 proper destructuring needed
 // you should make one component, which can both be used to edit and update todo
 // why database.js?
+
+// emon
+// code review (requirements)
+
+// code review (overall)
+// get rid of the console logs
+// use a single component for edit and update
+// what does AddUpdate.jsx do?
+// what does Cards.jsx do?
+// why is Cards inside a folder and others are not?
+
+// @Cards.jsx
+// // @21 we use (type,payload) keys in action, do not use a third key
+// // @9 confusing names.
+// // @31 use a proper structure for dispatch allthroughout
+// @Todo.jsx
+// // className app unnecessary
+
+// Konka
+
+// requirements check 
+// no validation on fields
+// no stimulus for button hover
+// no stimulus for update
+
+// code review (overall)
+// remove trashes
+// clean up app.js
+// clean up console logs
+
+// code review (file based)
+// @ App.js
+// // use functional components instead of class components
+// //@9, why title?
+// // what do fsubmit, fremove do?
+// // @17 what is this line doing?
+// //@53 use filter instead of splice 
+// //@78 no need
+// //@89 use meaningful name
+
+// Nahid Reza
+
+// code review (overall)
+// remove trashes
+// use functional components
+// one single component should suuply the functionalities of edit and update
+// get rid of console logs
+// code review (file based)
+// @Main.jsx
+// //@22 no need to copyTodo
+// //@33 why 'd'
+// //@34 same, no need for newTodos
+// //@44 what is the 'id' ?
+// //@48 do not use splice use filter instead
+// //
