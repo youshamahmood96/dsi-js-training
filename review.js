@@ -1,119 +1,42 @@
 // Sohel Rana
  
-// No folder Structure, originating in confusion about functionalities of different component
-// unnecessary ContextApi.js component
-// No Global State
-// Provider in app.js
-// at UserList.js 
-// // @ 29,30, redundant code
-// // @ 48-54, why?
-// // @ 56, why input type email on username?
-// // @ 58, why value = {username}
-// // @ 72, space in name is not advisable
-// // @ 84-87, {...setId} , {...setUsername} etc
-// at User.js
-// // @ 24,
-// {stateUser.map(({id, username, password, todo}, index) => (
-//     <div className="user" key={index}>
-//       <div className="details">
-//         <p className="username"> Username: {username} </p>
-//         <p> To-do : {todo} </p>
-//         <button
-//           className="btn update-btn"
-//           onClick={() => {
-//             updateHandle(id, username, password, todo);
-//           }}
-//         >
-//           Update
-//         </button>
-//         <button
-//           className="btn delete-btn"
-//           onClick={() =>
-//             deleteHandle(id, username, password, todo)
-//           }
-//         >
-//           Delete
-//         </button>
-//       </div>
-//     </div>
-//   ))}
+//requirement
+
+// i shouldnt be able to access /checkout normally
+// if i click below cart it doesnt disappear
+// why purchase button leads to an error?
+// not found page doesnt have a link to home
+
+// @checkout.js & @ Cart.js, we are calculating total price here, extract this into a reusable function
 
 // Akib uz zaman
-// @ TodoList
-// // why addTodo imported here and sent as props instead of directly imported into the component?
-// @TodoForm
-// // we should use proper destructuring
-// @AppReducer
-// // we use global actions, store them into variables
-// confusing names
 
-// {
-//   todos.length !== 0 ? todos.map(({id,name,email,todo}) => (
-//       <div key={id} className="flex flex-col border-1 rounded-lg overflow-hidden m-1">
-//           <div className="flex flex-col p-1 px-2 bg-gray-200">
-//               <div className="flex flex-row justify-between">
-//                   <div className="text-lg">Name: {name}</div>
-//                   <div className="flex flex-row space-x-2">         
-//                       <FaRegEdit 
-//                       className="cursor-pointer"
-//                       onClick={() => setEdit({
-//                           id,
-//                           name,
-//                           email,
-//                           todo,
-//                       })}
-//                       />
-//                       <RiDeleteBinLine 
-//                       className="cursor-pointer" 
-//                       onClick={() => deleteTodo(id)}
-//                       />
-//                   </div>
-//               </div>
-//               <div className="text-sm">Email: {email}</div>
-//           </div>
-//           <div className="bg-blue-200 overflow-hidden p-1 px-2">
-//               <div>To-do: {todo}</div>
-//           </div>
-//       </div>
-//   )) : <div className="p-1 px-2">No To-dos found</div>
-// }
+// @store.js we shouldnt use let keyword while defining store and persistor
+// keep redux things in a separate folder\
+// i can type /checkout and access the checkout path
+
+// @cart.js 12,13, use a single useSelector to fetch the whole state, then destructure it
+// @15 no need for another function here
+
+// @checkout.js @12 same, no need for another function
+
+// @productCard.js @14 same, no need for two useSelectors
+
+
+
 
 // Mahbub Alam Navid
 
-// first review
-// remove trashes from folder structure (not done)
-// keep the app.js clean (multiple things need to be fixed) (partially done)
-// proper destructuring needed (not done)
-// use the createContext line to update the initial state. (not done)
-// folder structure can be better (done)
-// @AddUser.js (done)
-// // @6, confusing
-// // use single state throughout the whole component
-// // @30 you can use callback instead of this
-// // @33 type={"email"} not needed, just type="email"
+// you can keep navbar as a common component
+// show total price
+// no clear cart button
 
-// second review
-// confusing naming (@AddUser:16)
-// use separate handleChange function
-// no validation on fields
-// @globalContext
-// // why two useReducer hook
 
-// Md. Basim Uddin Ahmed
-// Do not push .idea 
-// proper destructuring needed all over
-// we dont need className={"title"}
-// can we rewrite the useClickedOutside hook without manipulating the real dom?
-// @TodoCard
-// // @22 just pass todo, also you should pass only relevant info to a reducer function
-// @TodoReducer
-// // @1 we should keep this in a separate file
-// // @10 return [...state,action.todo]
-// // @13 state[(action.todo.id - 1)] = action.todo return state
-// // @19 return state.filter(todo=>todo.id === action.todo.id)
-// @TodoCreate
-// // @19 why didnt we do this in state? also, use destructuring
-// // @88 explain
+// @Product.js
+// refactored a bit
+
+//@cart.js @39 extract this into a function
+//@navbar @13, extract this into a function
 
 // Emon
 
@@ -201,14 +124,26 @@
 
 // code review(overall)
 
-// bad ux, use margin and padding properly
-// use className,htmlFor instead of using class,for
-// cleaner folder structure necessary
-// clean up app.js
-// js or jsx?
-// proper destructuring needed (e.g @app.js>30,34,38)
+// use className instead of class
+// unnecessary app.css
+// what is the id of your todos?
+
 
 // code review(file based)
+
+//@TodoBoard.jsx
+
+// // @5 what does editDelete mean and wht does it do?
+// // @18 what is newTodos2? why was it necessary?
+// // @20 shouldnt you do this before any operation?
+// // @38-40, proper destructuring needed
+
+//@TodoHome.jsx
+
+// // @9, why a function?
+// // @16 poor naming
+// // @43 proper destrcuturing needed
+
 
 // @App.js
 // //@6,8 confusing namings
@@ -222,20 +157,18 @@
 
 // opu
 
-// code review (requirements)
-// zero responsiveness
-// no indication of adding a todo
-
 // code review (overall)
-// clean up folder structure
-// clean up app.js
 
+// clean up folder structure
+// break up the entire css into parts
+// name your components with uppercase letters
+// clear console (one warning and one error is showing)
 // code review (file based)
 // @Todo.jsx
-// //  @34,36 confusing naming and camelcase needed
-// // @41-43 proper destructuring needed
-// you should make one component, which can both be used to edit and update todo
-// why database.js?
+// // @18 camelcase
+// // @20 confusing naming
+// // @61 put this in an if-else
+// // 
 
 // emon
 // code review (requirements)
@@ -256,15 +189,7 @@
 
 // Konka
 
-// requirements check 
-// no validation on fields
-// no stimulus for button hover
-// no stimulus for update
 
-// code review (overall)
-// remove trashes
-// clean up app.js
-// clean up console logs
 
 // code review (file based)
 // @ App.js
@@ -279,15 +204,34 @@
 // Nahid Reza
 
 // code review (overall)
-// remove trashes
-// use functional components
-// one single component should suuply the functionalities of edit and update
-// get rid of console logs
+
+// No validation of fields on update
+// Use "requried" in input
+// clear console 
+// move css to separate folders
+
 // code review (file based)
-// @Main.jsx
-// //@22 no need to copyTodo
-// //@33 why 'd'
-// //@34 same, no need for newTodos
-// //@44 what is the 'id' ?
-// //@48 do not use splice use filter instead
-// //
+
+// @TodoContext.jsx
+// // everything in TodoContext.jsx why?
+// // @13,@14 confusing names
+// // why is todocount needed?
+// // @16 what does it do
+// // @24 what is this?
+// // @52 where is the else?
+
+// @Form.jsx
+// // @4 editMode is not being used
+// // @19.. why use separate functions where you arte already passing that to a function?
+// // @81 destructure
+
+// @Todo.jsx
+
+// // what does setEditMode do and why is there a necessity for a boolean named todoForm?
+
+// @TodoCard.jsx
+
+// // @9 unnecessary functions
+
+// Todos,Todo so many confusing components
+
