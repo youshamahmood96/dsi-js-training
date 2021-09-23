@@ -40,18 +40,53 @@
 
 // Emon
 
-// upgrade npm version
-// trashes still here
-// app.js still not clean
-// write the reducer function separately
-// @components>Home.js
-// // use reducer functions for these tasks
-// // do not use splice
-// // @12 why change,setChange?
-// // everything in one single file
+// requirement check
 
-// @components>Cards.jsx
-// // why update,setupdate
+// As per discussion, lot of things need to be fixed
+
+// code review (overall)
+
+// remove trashes
+// routing not done properly
+// I can go to checkout without selecting any product
+// why navbar and banner common components
+
+// code review (file based)
+// @Checkout.jsx
+// // @10 why length?
+// // @11 we dont use for loop
+// // @11 extract this in a reusable function
+// // @37 unnecessary destrcuture: it can be done like this-->
+// // {selectedItems.map(item => (
+//     <CheckoutItems
+//     key={item.id}
+//     {...item}
+//    />
+//  ))}
+
+// @CheckoutItems.jsx
+// // @24 DollarIcon instead of Dollar
+
+// @ShoppingContext.jsx
+// //@6 why itemlist in my global state?
+// // Do not name "List"
+
+// @prodcuts/changeSelected... , what is this?
+// @ItemCards.jsx
+// // @14 why?
+// // @38 why useEffect?
+
+// @ProductsSearch.jsx
+// // unnecessary destructure
+
+// @SideBarContainer.jsx
+// // @12 why useEffect?
+
+//  @SidebarItemCards.jsx
+// // @12 why?
+
+
+
 
 // Shadman
 
@@ -234,4 +269,44 @@
 // // @9 unnecessary functions
 
 // Todos,Todo so many confusing components
+
+// basim uddin
+
+// you can return the .toFixed with parseInt
+// @fetchDataFromApi @6 return Promise.reject(response);
+// @12 what do i want to show?
+// @utils/loadData.js arent we using redux persist?
+// clean up console
+// where does /checkout go?
+// @ProductCheckoutCard.js @11
+
+// shadman
+
+// about using custom hooks
+
+// i want to input number in cart
+// we dont use for loops anymore @useCartHelper
+// @CartItemShow.js @18 we can extract this to another component
+// we shouldnt be able to access /checkout with our empty shopping cart
+// @checkout.js, we should rewrite this also @OrderSummary.js 
+// @checkout.js @311 why +?
+// @Home.js we should rewrite the routing
+// @navbar.js @21 why is this copied?
+// @OrderSummary.js @23 unnecesssary
+// // @26 why useEffect here?
+// // @32 unnecessary copy
+// // @35  products[cartItem.id-1].rating['count'] -= cartItem.quantity;
+// // subTotal price and total price can be reusable
+
+// @ProductList.js
+// // @17 as we are using this in multiple cases, we couldve exported this
+// // @21 this could be extracted into a custom hook
+// // @29 did we need a setProductList?
+// // @30 what does this do? 
+// // so many useEffects
+
+// @ProductOvervies.js
+// // why useEffect?
+
+
 
