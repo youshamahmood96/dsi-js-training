@@ -1,6 +1,7 @@
 import React from "react";
 // import useEffectSkipFirstRender from "./CustomHooks/useEffectSkipFirstRender";
-import ReduxSession1 from "./ReduxSession1/ReduxSession1";
+// import ReduxSession1 from "./ReduxSession1/ReduxSession1";
+import ReduxSession2 from "./ReduxSession2/ReduxSession2";
 // import ReduxPractise from "./ReduxPractise/ReduxPractise";
 // import ReduxExample from "./ReduxFolders/ReduxExample/ReduxExample";
 // import ContextSimple from "./ContextApiFolders/ContextSimple/ContextSimple";
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <ReduxSession1/>
+      <ReduxSession2/>
     </React.Fragment>
   );
 }
